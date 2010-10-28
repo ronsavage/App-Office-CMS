@@ -5,9 +5,10 @@ CHANGES
 data/asset_types.txt
 data/event_types.txt
 data/menu_orientations.txt
+data/os_types.txt
+docs/cms.schema.png
 docs/html/cms.help.html
 docs/pod/cms.help.pod
-docs/cms.schema.png
 htdocs/assets/css/app/office/cms/table.tx.css
 htdocs/assets/css/app/office/cms/web.page.css
 htdocs/assets/templates/app/office/cms/content.js
@@ -59,7 +60,9 @@ lib/App/Office/CMS/View/Site.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
+README
 scripts/create.tables.pl
+scripts/display.menu.pl
 scripts/drop.tables.pl
 scripts/new.db.sh
 scripts/populate.tables.pl
