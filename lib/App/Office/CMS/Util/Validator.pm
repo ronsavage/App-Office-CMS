@@ -26,7 +26,7 @@ has query =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '1.00';
+our $VERSION = '0.90';
 
 # -----------------------------------------------
 

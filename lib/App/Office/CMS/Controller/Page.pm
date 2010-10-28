@@ -11,7 +11,7 @@ use Try::Tiny;
 
 # We don't use Moose because we isa CGI::Application.
 
-our $VERSION = '1.00';
+our $VERSION = '0.90';
 
 # -----------------------------------------------
 
