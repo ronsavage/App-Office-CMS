@@ -7,7 +7,7 @@ data/event_types.txt
 data/menu_orientations.txt
 docs/html/cms.help.html
 docs/pod/cms.help.pod
-docs/schema.png
+docs/cms.schema.png
 htdocs/assets/css/app/office/cms/table.tx.css
 htdocs/assets/css/app/office/cms/web.page.css
 htdocs/assets/templates/app/office/cms/content.js

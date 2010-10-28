@@ -771,13 +771,11 @@ This would allow the client to pass the menu item's id to the server, instead of
 
 =item o Do we need separate editor windows for each page's head and body?
 
-=item o Do we restrict page deletions to only leaf pages?
-
 =item o How will we handle moving sub-menus?
 
 We don't.
 
-=item o Ship with SQLite actived, not Postgres
+=item o Ship with SQLite activated, not Postgres
 
 =item o Consider using <span> instead of <div>
 
