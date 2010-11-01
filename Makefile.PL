@@ -26,6 +26,7 @@ WriteMakefile
 	{
 		Any::Moose                 => 0.13,
 		Brannigan                  => 0.5,
+		Capture::Tiny              => 0.08,
 		CGI                        => 3.49,
 		CGI::Application           => 4.31,
 		CGI::Application::Dispatch => 2.17,

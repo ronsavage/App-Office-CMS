@@ -5,6 +5,10 @@ use common::sense;
 
 extends 'App::Office::CMS::Database::Base';
 
+use Capture::Tiny 'capture';
+
+use File::Slurp; # For write_file().
+
 # If Moose...
 #use namespace::autoclean;
 
@@ -34,10 +38,28 @@ sub add
 sub backup
 {
 	my($self, $page, $content) = @_;
+	my($backup_command) = ${$self -> db -> config}{backup_command};
+	my($backup_file)    = ${$self -> db -> config}{backup_file};
+	my($stdout)         = $self -> capture_or_die($backup_command);
+
+	write_file($backup_file, {err_mode => 'quiet'}, $stdout) || die "Error: Can't write backup file: $!\n";
 
 	return $self -> update($page, $content) . " and backed-up";
 
 } # End of backup.
+
+# -----------------------------------------------
+
+sub capture_or_die
+{
+	my($self, @command)  = @_;
+	my($stdout, $stderr) = capture{system(@command)};
+
+	$stderr && die "Error: $stderr\n";
+
+	return $stdout;
+
+} # End of capture_or_die.
 
 # --------------------------------------------------
 
