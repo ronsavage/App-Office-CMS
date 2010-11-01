@@ -23,6 +23,42 @@ our $VERSION = '0.90';
 
 # -----------------------------------------------
 
+sub backup
+{
+	my($self) = @_;
+
+	$self -> log(debug => 'backup()');
+
+	my($target_div) = 'update_content_message_div';
+
+	my($result);
+
+	try
+	{
+		my($message, $page, $content) = $self -> process_content_form('update');
+
+		if (! $message)
+		{
+			# Success.
+
+			$message = $self -> param('db') -> content -> backup($page, $content);
+			$result  = $self -> build_success_result($page, $message, $target_div);
+		}
+	}
+	catch
+	{
+		$result = $self -> build_error_result($_, $target_div);
+	};
+
+	# update_content_message_div is on screen (under the Edit Content tab)
+	# because we're displaying content.
+
+	return JSON::XS -> new -> utf8 -> encode({results => $result});
+
+} # End of backup.
+
+# -----------------------------------------------
+
 sub build_content_hash
 {
 	my($self, $valid) = @_;
@@ -144,7 +180,7 @@ sub cgiapp_init
 {
 	my($self) = @_;
 
-	$self -> run_modes([qw/generate update/]);
+	$self -> run_modes([qw/backup generate update/]);
 
 } # End of cgiapp_init.
 
@@ -438,11 +474,10 @@ sub update
 		$result = $self -> build_error_result($_, $target_div);
 	};
 
+	# update_content_message_div is on screen (under the Edit Content tab)
+	# because we're displaying content.
 	# update_page_message_div is on screen (under the Edit Pages tab)
 	# because we're displaying a page.
-	# update_content_message_div is on screen (under the Edit Content tab),
-	# because we're displaying a page's content with an Edit button.
-	# It appears there by virtue of being within search.tx.
 
 	return JSON::XS -> new -> utf8 -> encode({results => $result});
 

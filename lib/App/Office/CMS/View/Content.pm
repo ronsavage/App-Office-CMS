@@ -22,7 +22,12 @@ sub build_head_js
 
 	$self -> log(debug => 'build_head_js()');
 
-	return $self -> templater -> render('content.js', {form_action => $self -> form_action});
+	my($param) =
+	{
+		form_action => $self -> form_action,
+	};
+
+	return $self -> templater -> render('content.js', $param);
 
 } # End of build_head_js.
 
@@ -34,11 +39,14 @@ sub build_update_content_html
 
 	$self -> log(debug => 'build_update_content_html()');
 
-	my($content) = $self -> db -> content -> get_content_by_page_id($$page{id});
-	my($context) = 'update';
-	my($param)   =
+	my($backup_command) = ${$self -> config}{backup_command};
+	my($content)        = $self -> db -> content -> get_content_by_page_id($$page{id});
+	my($context)        = 'update';
+	my($param)          =
 	{
+	 backup      => $backup_command ? 1 : 0, # We only need a Boolean in the template.
 	 body        => mark_raw($$content{body}),
+	 colspan     => $backup_command ? 1 : 2, # Make generate button's position look pretty.
 	 context     => $context,
 	 design_name => $$design{name},
 	 head        => mark_raw($$content{head}),

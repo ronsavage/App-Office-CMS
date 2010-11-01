@@ -31,6 +31,16 @@ sub add
 
 # --------------------------------------------------
 
+sub backup
+{
+	my($self, $page, $content) = @_;
+
+	return $self -> update($page, $content) . " and backed-up";
+
+} # End of backup.
+
+# --------------------------------------------------
+
 sub duplicate_contents
 {
 	my($self, $attr) = @_;
@@ -147,7 +157,7 @@ sub update
 
 	$self -> save_content_record($action, $page, $content);
 
-	return ucfirst "Saved ($action) content";
+	return "Saved ($action) content";
 
 } # End of update.
 

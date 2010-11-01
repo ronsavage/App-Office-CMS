@@ -23,11 +23,17 @@
 <tr>
 <td></td>
 <td><input type="reset" value="Reset" /></td>
-<td><input type="submit" name="submit_<: $context :>_content" id="submit_<: $context :>_content" value="<: $submit_text :>" onClick="document.<: $context :>_content_form.action.value=1" /></td>
+<td align="center"><input type="submit" name="submit_<: $context :>_content" id="submit_<: $context :>_content" value="<: $submit_text :>" onClick="document.<: $context :>_content_form.action.value=1" /></td>
 </tr>
 <tr><td colspan="3"><hr /></td></tr>
 <tr>
-<td align="center" colspan="3"><input type="submit" name="submit_generate_content" id="submit_generate_content" value="Generate" onClick="document.<: $context :>_content_form.action.value=2" /></td>
+<td></td>
+: if $backup {
+<td><input type="submit" name="submit_backup_content" id="submit_backup_content" value="Backup" onClick="document.<: $context :>_content_form.action.value=2" /></td>
+: }
+: else {
+: }
+<td align="center" colspan="$colspan"><input type="submit" name="submit_generate_content" id="submit_generate_content" value="Generate" onClick="document.<: $context :>_content_form.action.value=3" /></td>
 </tr>
 </table>
 

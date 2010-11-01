@@ -125,6 +125,32 @@ sub BUILD
 
 	$self -> dbh(DBI -> connect($$config{dsn}, $$config{username}, $$config{password}, $attr) );
 
+=pod
+
+use Modern::Perl;
+use DBI;
+use Exception::Class::DBI;
+
+my $dbh = DBI->connect('DBI:mysql:test', 'user', pass, {
+PrintError => 0,
+RaiseError => 0,
+HandleError => Exception::Class::DBI->handler,
+});
+
+
+eval {
+$dbh->do('insert into non_extistent_table values(1)')
+};
+
+if (my $e = Exception::Class->caught('Exception::Class::DBI')) {
+say $e->err;
+say $e->errstr;
+} else {
+# Check for other exceptions as required
+}
+
+=cut
+
 	if ($$config{dsn} =~ /SQLite/i)
 	{
 		$self -> dbh -> do('PRAGMA foreign_keys = ON');

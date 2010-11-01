@@ -78,6 +78,10 @@ var update_content_onsubmit = function ()
 		break;
 
 	case "2":
+		url = url + "backup";
+		break;
+
+	case "3":
 		url = url + "generate";
 		break;
 	}
