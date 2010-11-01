@@ -32,6 +32,7 @@ httpd/cgi-bin/test.untaint.html
 lib/App/Office/CMS.pm
 lib/App/Office/CMS/.htoffice.cms.conf
 lib/App/Office/CMS/Controller.pm
+lib/App/Office/CMS/Controller/Backup.pm
 lib/App/Office/CMS/Controller/Content.pm
 lib/App/Office/CMS/Controller/Design.pm
 lib/App/Office/CMS/Controller/Initialize.pm
