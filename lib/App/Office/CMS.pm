@@ -523,14 +523,31 @@ Also, the code assumes the database server supports $dbh -> last_insert_id(undef
 
 =item o How do I back up the database?
 
-The config file .htoffice.cms.conf, contains an unused key, backup_url.
+See the config file .htoffice.cms.conf:
 
-When this is implemented, the value will be something like /backup_postgres,
-which - as per L<CGI::Application::Dispatch> and C<cms.psgi> - will provide access
-to C<App::Office::CMS::Controller::BackupPostgres>'s default run mode, for example.
+	backup_command = pg_dump -U cms cms
+	backup_file = /tmp/pg.cms.backup.dat
 
-So, it's just a matter of examining the config option to see if backup is
-configured, and if it is, putting a button on the screen somewhere appropriate.
+When backup_command has a value, the Edit Contents tab gets a [Backup] button, and when this button
+is clicked:
+
+=over 4
+
+=item o The command is run
+
+=item o STDOUT and STDERR are captured
+
+=item o If STDERR contains anything, the program exits
+
+=item o Otherwise, STDOUT is written to the output file
+
+=back
+
+So, why are there 2 lines, and not something like 'pg_dump -U cms cms > /tmp/pg.cms.backup.dat'?
+
+Because I use L<Capture::Tiny>, which does not want you to use redirection.
+
+Lastly, the output is written using L<File::Slurp>.
 
 =item o What's this thing called 'context' in the menus and pages tables?
 
