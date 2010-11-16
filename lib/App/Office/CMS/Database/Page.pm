@@ -281,7 +281,7 @@ sub delete
 	# In the short term, go to the home page.
 
 	my($homepage) = $self -> get_homepage($$page{site_id}, $$page{design_id});
-	
+
 	$self -> log(debug => "Got home page id: $$homepage{id}");
 
 	$self -> db -> session -> param(edit_page_id => $$homepage{id});
@@ -339,7 +339,7 @@ sub duplicate_pages
 			my($context) = $self -> db -> build_context($$attr{old_site_id}, $old_design_id);
 			my($tree)    = $self -> db -> menu -> get_menu_by_context($context);
 			$context     = $self -> db -> build_context($$attr{new_site_id}, $new_design_id);
-	
+
 			$self -> db -> menu -> context($context);
 			$self -> db -> menu -> save_menu_tree('add', $tree);
 		}

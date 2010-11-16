@@ -27,7 +27,7 @@ sub build_about_html
 
 	my($html) = $self -> param('templater') -> render('table.tx', {data => [@tr]});
 	$html     =~ s/\n//g;
-	
+
 	return $html;
 
 } # End of build_about_html.

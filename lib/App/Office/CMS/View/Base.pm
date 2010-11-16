@@ -61,7 +61,7 @@ sub build_select
 
 	return $self -> templater -> render
 	(
-	 'select.tx',	
+	 'select.tx',
 	 {
 		 name => $id_name,
 		 loop =>

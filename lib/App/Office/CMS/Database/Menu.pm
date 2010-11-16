@@ -77,7 +77,7 @@ sub find_node_by_name
 sub get_id_of_node
 {
 	my($self, $tree, $node) = @_;
- 
+
 	$self -> log(debug => 'get_id_of_node($tree, ' . $node -> name . ')');
 
 	my($opt) =

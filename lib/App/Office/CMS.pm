@@ -571,7 +571,7 @@ You can ignore these 2 fields, and the other 2 tables, menu_orientations and os_
 =item o I added a field to update_page_form, but it's data vanishes.
 
 Basdically, copy the code dealing with 'homepage'.
- 
+
 At the very least, ensure you've updated:
 
 =over 4
@@ -626,7 +626,7 @@ The path info is 'page/edit', which is added to the base '$form_action/'.
 
 As per L<CGI::Application::Dispatch>, this calls C<App::Office::Controller::Page>'s
 edit() method.
- 
+
 Change this path info to call a different module. So, 'custom_page/my_edit' will
 call C<App::Office::Controller::CustomPage>'s my_edit() method.
 
