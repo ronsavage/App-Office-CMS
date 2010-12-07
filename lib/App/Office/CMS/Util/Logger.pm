@@ -72,7 +72,7 @@ sub BUILD
 	driver          => $driver,
 	maxlevel        => $$config{max_log_level},
 	message_pattern => [qw/%L %m/],
-	message_layout  => '%p %m',
+	message_layout  => '%m',
 	minlevel        => $$config{min_log_level},
 	newline         => 0,
 	password        => $$config{password},
