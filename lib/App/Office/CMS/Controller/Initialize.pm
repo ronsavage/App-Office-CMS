@@ -167,6 +167,12 @@ function make_update_site_name_focus(eve)
 
 var tab_view = new YAHOO.widget.TabView();
 
+tinyMCE.init
+({
+	editor_selector: "mce_editor",
+	mode:            "specific_textareas"
+});
+
 EJS
 
 	return $js;

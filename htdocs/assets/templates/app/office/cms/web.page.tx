@@ -31,7 +31,7 @@
 <script type="text/javascript" src="<: $yui_url :>/build/tabview/tabview-min.js"></script>
 <script type="text/javascript" src="<: $yui_url :>/build/treeview/treeview.js"></script>
 
-<!-- <script type="text/javascript" src="<: $tiny_mce_url :>/tiny_mce.js"></script> -->
+<script type="text/javascript" src="<: $tiny_mce_url :>/tiny_mce.js"></script>
 
 <script type="text/javascript" src="<: $validator_js_url :>/validator.js"></script>
 
