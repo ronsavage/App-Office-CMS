@@ -8,7 +8,7 @@ use App::Office::CMS::Util::Validator;
 use App::Office::CMS::Database;
 use App::Office::CMS::View;
 
-use CGI::Session;
+use Data::Session;
 
 use JSON::XS;
 
@@ -89,20 +89,18 @@ sub cgiapp_prerun
 	# Set up the session. To simplify things we always use
 	# CGI::Session, and ignore the PSGI alternative.
 
-	my($q) = $self -> query;
+	my($config) = $self -> config;
+	my($q)      = $self -> query;
 
 	$self -> param(session =>
-	CGI::Session -> new
+	Data::Session -> new
 	(
-		${$self -> param('config')}{session_driver},
-		$q,
-		{
-			Handle    => $self -> param('db') -> dbh,
-			TableName => ${$self -> param('config')}{session_table_name},
-		},
-		{
-			name => 'sid',
-		}
+		data_source => $$config{dsn},
+		dbh         => $self -> param('db') -> dbh,
+		name        => 'sid',
+		query       => $q,
+		table_name  => $$config{session_table_name},
+		type        => $$config{session_driver},
 	) );
 
 	# Set up a few more things.

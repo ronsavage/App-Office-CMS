@@ -4,6 +4,7 @@ Revision history for Perl extension App::Office::CMS.
 	- Replace Log::Dispatch with Log::Handler. Speed is not everything, but Log::Handler is faster.
 	- In .htoffice.csm.conf, change min_log_level to emergency, and add max_log_level as debug.
 		See Log::Handler for details.
+	- Replace CGI::Session with Data::Session.
 
 0.90  Mon Nov  1 13:20:00 2010
 	- Original version.
