@@ -69,6 +69,7 @@ scripts/new.db.sh
 scripts/populate.tables.pl
 scripts/report.tables.pl
 scripts/schema.sh
+scripts/test.log.handler.pl
 scripts/test.text.xslate.pl
 t/pod.t
 t/test.t
