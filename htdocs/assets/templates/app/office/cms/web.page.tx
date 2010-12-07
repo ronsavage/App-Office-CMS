@@ -36,6 +36,14 @@
 <script type="text/javascript" src="<: $validator_js_url :>/validator.js"></script>
 
 <script type="text/javascript">
+tinyMCE.init
+({
+	mode:  "textareas",
+	theme: "simple"
+});
+</script>
+
+<script type="text/javascript">
 <: $head_js :>
 
 function init()

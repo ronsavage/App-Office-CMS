@@ -115,12 +115,6 @@ else
 	make_new_site_name_focus();
 }
 
-tinyMCE.init
-({
-	mode:  "textareas",
-	theme: "simple"
-});
-
 EJS
 
 	return $head_init;
