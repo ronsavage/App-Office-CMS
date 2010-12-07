@@ -98,6 +98,7 @@ sub cgiapp_prerun
 		data_source => $$config{dsn},
 		dbh         => $self -> param('db') -> dbh,
 		name        => 'sid',
+		pg_text     => 1,
 		query       => $q,
 		table_name  => $$config{session_table_name},
 		type        => $$config{session_driver},
