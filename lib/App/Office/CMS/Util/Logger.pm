@@ -55,7 +55,7 @@ sub BUILD
 # the log table having been created, we ensure that it is.
 
 	$self -> create_log_table_if_necessary;
-	$self -> logger(Log::Hanlder -> new);
+	$self -> logger(Log::Handler -> new);
 
 	# We just need driver for Log::Hanlder V 0.68 and below, which cause an uninitialized warning
 	# when the driver option is not set.
