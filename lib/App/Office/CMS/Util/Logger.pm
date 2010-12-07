@@ -3,8 +3,7 @@ package App::Office::CMS::Util::Logger;
 use Any::Moose;
 use common::sense;
 
-use Log::Dispatch;
-use Log::Dispatch::DBI;
+use Log::Handler;
 
 # We don't use:
 # extends 'App::Office::CSM::Database::Base';
@@ -43,29 +42,45 @@ has time_option =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.90';
+our $VERSION = '0.91';
 
 # -----------------------------------------------
 
 sub BUILD
 {
 	my($self)   = @_;
-	my($config) = App::Office::CMS::Util::Config -> new -> config;
+	my($config) = $self -> db -> config;
 
 # Because SQLite won't allow the logger -> add() without
 # the log table having been created, we ensure that it is.
 
 	$self -> create_log_table_if_necessary;
-	$self -> logger(Log::Dispatch -> new);
+	$self -> logger(Log::Hanlder -> new);
+
+	# We just need driver for Log::Hanlder V 0.68 and below, which cause an uninitialized warning
+	# when the driver option is not set.
+	# Expected format of dsn: dbi:Pg:dbname=cms.
+
+	(my($driver) = $$config{dsn}) =~ s/^.+?:(.+?):.+$/$1/;
+
 	$self -> logger -> add
 	(
-		Log::Dispatch::DBI -> new
-		(
-			dbh       => $self -> db -> dbh,
-			min_level => $$config{min_log_level},
-			name      => __PACKAGE__,
-		)
-	);
+	dbi =>
+	{
+	columns         => [qw/level message/],
+	data_source     => $$config{dsn},
+	driver          => $driver,
+	maxlevel        => $$config{max_log_level},
+	message_pattern => [qw/%L %m/],
+	message_layout  => '%p %m',
+	minlevel        => $$config{min_log_level},
+	newline         => 0,
+	password        => $$config{password},
+	persistent      => 0,
+	table           => 'log',
+	user            => $$config{username},
+	values          => [qw/%level %message/],
+	});
 
 }	# End of BUILD.
 

@@ -104,7 +104,7 @@ has site =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.90';
+our $VERSION = '0.91';
 
 # -----------------------------------------------
 
@@ -156,14 +156,11 @@ say $e->errstr;
 		$self -> dbh -> do('PRAGMA foreign_keys = ON');
 	}
 
-	# Logger uses db -> dbh, so this call must follow $self -> dbh(...).
-
-	$self -> logger(App::Office::CMS::Util::Logger -> new(db => $self) );
-
 	$self -> asset(App::Office::CMS::Database::Asset -> new(db => $self) );
 	$self -> content(App::Office::CMS::Database::Content -> new(db => $self) );
 	$self -> design(App::Office::CMS::Database::Design -> new(db => $self) );
 	$self -> event(App::Office::CMS::Database::Event -> new(db => $self) );
+	$self -> logger(App::Office::CMS::Util::Logger -> new(db => $self) );
 	$self -> menu(App::Office::CMS::Database::Menu -> new(db => $self) );
 	$self -> page(App::Office::CMS::Database::Page -> new(db => $self) );
 	$self -> simple(DBIx::Simple -> new($self -> dbh) );

@@ -12,7 +12,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.90';
+our $VERSION = '0.91';
 
 # --------------------------------------------------
 
