@@ -89,7 +89,7 @@ sub cgiapp_prerun
 	# Set up the session. To simplify things we always use
 	# CGI::Session, and ignore the PSGI alternative.
 
-	my($config) = $self -> config;
+	my($config) = $self -> param('config');
 	my($q)      = $self -> query;
 
 	$self -> param(session =>
