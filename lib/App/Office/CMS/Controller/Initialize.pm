@@ -170,7 +170,8 @@ var tab_view = new YAHOO.widget.TabView();
 tinyMCE.init
 ({
 	editor_selector: "mce_editor",
-	mode:            "specific_textareas"
+	mode:            "specific_textareas",
+	theme:           "advanced"
 });
 
 EJS
