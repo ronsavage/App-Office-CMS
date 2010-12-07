@@ -190,7 +190,6 @@ sub display
 	 css_url           => $$config{css_url},
 	 head_init         => mark_raw($self -> build_head_init),
 	 head_js           => mark_raw($self -> build_head_js),
-	 tiny_mce_url      => $$config{tiny_mce_url},
 	 validator_css_url => $$config{validator_css_url},
 	 validator_js_url  => $$config{validator_js_url},
 	 yui_url           => $$config{yui_url},

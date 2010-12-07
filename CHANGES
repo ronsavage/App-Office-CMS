@@ -6,7 +6,7 @@ Revision history for Perl extension App::Office::CMS.
 		See Log::Handler for details.
 	- Replace CGI::Session with Data::Session.
 	- Add pg_bytea and pg_text to .htoffice.cms.conf, for use by Data::Session.
-	- Active the HTML editor TinyMCE instead of just using textareas for page content.
+	- Active Yahoo's Rich Text Editor instead of just using textareas for page content.
 
 0.90  Mon Nov  1 13:20:00 2010
 	- Original version.

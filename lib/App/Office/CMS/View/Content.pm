@@ -22,9 +22,14 @@ sub build_head_js
 
 	$self -> log(debug => 'build_head_js()');
 
-	my($param) =
+	my($config) = $self -> config;
+	my($param)  =
 	{
-		form_action => $self -> form_action,
+		editor_body_window_height => $$config{editor_body_window_height},
+		editor_body_window_width  => $$config{editor_body_window_width},
+		editor_head_window_height => $$config{editor_head_window_height},
+		editor_head_window_width  => $$config{editor_head_window_width},
+		form_action               => $self -> form_action,
 	};
 
 	return $self -> templater -> render('content.js', $param);
