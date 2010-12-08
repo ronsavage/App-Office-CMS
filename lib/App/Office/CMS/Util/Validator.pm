@@ -76,28 +76,27 @@ sub validate_content
 		$$data{$key} = $handler -> extract(-as_hex => $key);
 	}
 
-	for $key (qw/body head submit_update_content/)
+	for $key (qw/body_text head_text submit_update_content/)
 	{
 		$$data{$key} = $handler -> extract(-as_printable => $key);
 	}
 
-	my($max_body_content_length) = ${$self -> config}{max_body_content_length};
-	my($max_head_content_length) = ${$self -> config}{max_head_content_length};
-	my($validator)               = Brannigan -> new
+	my($max_content_length) = ${$self -> config}{max_content_length};
+	my($validator)          = Brannigan -> new
 	({
 	 name   => 'validate_content',
 	 params =>
 	 {
-		body =>
+		body_text =>
 		{
 			default        => '',
-			length_between => [0, $max_body_content_length],
+			length_between => [0, $max_content_length],
 			required       => 0,
 		},
-		head =>
+		head_text =>
 		{
 			default        => '',
-			length_between => [0, $max_head_content_length],
+			length_between => [0, $max_content_length],
 			required       => 0,
 		},
 		sid =>

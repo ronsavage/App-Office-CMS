@@ -22,9 +22,9 @@ sub add
 
 	$self -> log(debug => "add($$page{name}, ...)");
 	$self -> log(debug => '-' x 50);
-	$self -> log(debug => "$_ => $$content{$_}") for sort grep{! /body|head/} keys %$content;
-	$self -> log(debug => 'head => ' . length($$content{head}) . ' bytes');
-	$self -> log(debug => 'body => ' . length($$content{body}) . ' bytes');
+	$self -> log(debug => "$_ => $$content{$_}") for sort grep{! /^(?:body_text|head_text)$/} keys %$content;
+	$self -> log(debug => 'head_text => ' . length($$content{head_text}) . ' bytes');
+	$self -> log(debug => 'body_text => ' . length($$content{body_text}) . ' bytes');
 	$self -> log(debug => '-' x 50);
 
 	$self -> save_content_record('add', $page, $content);
@@ -133,9 +133,9 @@ sub save_content_record
 
 	my($table_name) = 'contents';
 	my(@field)      = (qw/
-body
+body_text
 design_id
-head
+head_text
 page_id
 site_id
 /);
@@ -167,9 +167,9 @@ sub update
 
 	$self -> log(debug => "update($$page{name}, ...)");
 	$self -> log(debug => '-' x 50);
-	$self -> log(debug => "$_ => $$content{$_}") for sort grep{! /body|head/} keys %$content;
-	$self -> log(debug => 'head => ' . length($$content{head}) . ' bytes');
-	$self -> log(debug => 'body => ' . length($$content{body}) . ' bytes');
+	$self -> log(debug => "$_ => $$content{$_}") for sort grep{! /^(?:body_text|head_text)$/} keys %$content;
+	$self -> log(debug => 'head_text => ' . length($$content{head_text}) . ' bytes');
+	$self -> log(debug => 'body_text => ' . length($$content{body_text}) . ' bytes');
 	$self -> log(debug => '-' x 50);
 
 	# Now determine if this is an add or an update.

@@ -1,10 +1,5 @@
 // content.js.
 
-// Global variables.
-
-var body_editor = null;
-var head_editor = null;
-
 var generate_content_callback =
 {
 	success: function(o)
@@ -46,35 +41,10 @@ var update_content_callback =
 			}
 			else
 			{
+				// Set the checkbox for is/isn't the homepage.
+
 				e = document.getElementById("update_content_homepage_div");
 				e.innerHTML = data.results.homepage;
-
-				if (body_editor === null)
-				{
-					body_editor = new YAHOO.widget.Editor
-					(
-					'body',
-					{
-						height:  '<: $editor_body_window_height :>',
-						width:   '<: $editor_body_window_width :>',
-						dompath: true
-					});
-				}
-
-				if (head_editor === null)
-				{
-					head_editor = new YAHOO.widget.Editor
-					(
-					'head',
-					{
-						height:  '<: $editor_head_window_height :>',
-						width:   '<: $editor_head_window_width :>',
-						dompath: true
-					});
-				}
-
-				body_editor.render();
-				head_editor.render();
 
 				tab_view.set('activeIndex', 3); // Edit Contents tab.
 				make_update_content_name_focus();
@@ -122,10 +92,6 @@ var update_content_onsubmit = function ()
 
 	if (action == 1)
 	{
-		body_editor.saveHTML();
-		head_editor.saveHTML();
-		document.update_content_form.body.value = body_editor.get('element').value;
-		document.update_content_form.head.value = head_editor.get('element').value;
 		var r = YAHOO.util.Connect.asyncRequest("POST", url, update_content_callback);
 	}
 	else

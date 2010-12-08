@@ -25,11 +25,7 @@ sub build_head_js
 	my($config) = $self -> config;
 	my($param)  =
 	{
-		editor_body_window_height => $$config{editor_body_window_height},
-		editor_body_window_width  => $$config{editor_body_window_width},
-		editor_head_window_height => $$config{editor_head_window_height},
-		editor_head_window_width  => $$config{editor_head_window_width},
-		form_action               => $self -> form_action,
+		form_action => $self -> form_action,
 	};
 
 	return $self -> templater -> render('content.js', $param);
@@ -50,11 +46,11 @@ sub build_update_content_html
 	my($param)          =
 	{
 	 backup      => $backup_command ? 1 : 0, # We only need a Boolean in the template.
-	 body        => mark_raw($$content{body}),
+	 body_text   => mark_raw($$content{body_text}),
 	 colspan     => $backup_command ? 1 : 2, # Make generate button's position look pretty.
 	 context     => $context,
 	 design_name => $$design{name},
-	 head        => mark_raw($$content{head}),
+	 head_text   => mark_raw($$content{head_text}),
 	 page_name   => $$page{name},
 	 sid         => $self -> session -> id,
 	 site_name   => $$site{name},
@@ -88,8 +84,9 @@ sub generate
 	my($config) = $self -> config;
 	my($param)  =
 	{
-		body        => mark_raw($$content{body}),
+		body_text   => mark_raw($$content{body_text}),
 		design_name => $$design{name},
+		head_text   => mark_raw($$content{head_text}),
 		menu        => mark_raw(join("\n", @$menu) ),
 		page_name   => $$page{name},
 		site_name   => $$site{name},

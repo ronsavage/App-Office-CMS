@@ -231,9 +231,9 @@ sub build_default_content
 
 	return
 	{
-		body      => '',
+		body_text => '',
 		design_id => $design_id,
-		head      => '',
+		head_text => '',
 		page_id   => $page_id,
 		site_id   => $site_id,
 	};

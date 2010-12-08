@@ -27,7 +27,6 @@
 <script type="text/javascript" src="<: $yui_url :>/build/menu/menu-min.js"></script>
 <script type="text/javascript" src="<: $yui_url :>/build/tabview/tabview-min.js"></script>
 <script type="text/javascript" src="<: $yui_url :>/build/treeview/treeview.js"></script>
-<script type="text/javascript" src="<: $yui_url :>/build/editor/editor-min.js"></script>
 
 <script type="text/javascript" src="<: $validator_js_url :>/validator.js"></script>
 

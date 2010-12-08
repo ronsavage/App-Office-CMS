@@ -127,7 +127,7 @@ sub cgiapp_prerun
 
 	$self -> log(info  => '');
 	$self -> log(info  => $q -> url(-full => 1, -path => 1) );
-	$self -> log(info  => "Param: $_: " . $q -> param($_) ) for $q -> param;
+	$self -> log(info  => "Param: $_: " . $q -> param($_) ) for grep{! /^(?:body_text|head_text)$/} $q -> param;
 	$self -> log(info  => 'Session id: ' . $self -> param('session') -> id);
 	$self -> log(debug => 'tmpl_path: ' . $self -> tmpl_path);
 

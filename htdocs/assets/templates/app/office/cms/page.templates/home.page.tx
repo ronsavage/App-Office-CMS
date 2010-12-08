@@ -42,6 +42,8 @@ function init()
 YAHOO.util.Event.onDOMReady(init);
 </script>
 
+<: $head_text :>
+
 </head>
 
 <body class="yui-skin-sam">
@@ -51,7 +53,7 @@ YAHOO.util.Event.onDOMReady(init);
 <table border="1">
 <tr>
 <td><div id="page_tree_div"></div></td>
-<td><: $body :></td>
+<td><: $body_text :></td>
 </tr>
 </table>
 

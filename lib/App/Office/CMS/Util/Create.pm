@@ -173,8 +173,8 @@ id $primary_key,
 design_id integer not null $foreign_key_1 references designs(id) on delete cascade,
 page_id integer not null $foreign_key_2 references pages(id) on delete cascade,
 site_id integer not null $foreign_key_3 references sites(id) on delete cascade,
-body text not null,
-head text not null
+body_text text not null,
+head_text text not null
 ) $engine
 SQL
 	$self -> report($table_name, 'created', $result);

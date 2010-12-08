@@ -73,7 +73,7 @@ a horizontal menu, both or neither.
 
 =head2 3: Edit the Design's content
 
-Use the built-in editor (Yahoo's RTE - Rich Text Editor) to add content
+Use the 2 textareas on the Edit Content tab to add content
 to each menu item's page, so that when a visitor to your site clicks on a menu item,
 they see the content you have designed for that page.
 

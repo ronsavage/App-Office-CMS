@@ -14,11 +14,11 @@
 </tr>
 <tr>
 <td valign="top">Head content:</td>
-<td colspan="2"><textarea name="head" id="head" rows="4" cols="100"><: $head :></textarea></td>
+<td colspan="2"><textarea name="head_text" id="head_text" rows="4" cols="100"><: $head_text :></textarea></td>
 </tr>
 <tr>
 <td valign="top">Body content:</td>
-<td colspan="2"><textarea name="body" id="body" rows="12" cols="100"><: $body :></textarea></td>
+<td colspan="2"><textarea name="body_text" id="body_text" rows="12" cols="100"><: $body_text :></textarea></td>
 </tr>
 <tr>
 <td></td>
