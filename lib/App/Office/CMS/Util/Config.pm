@@ -49,6 +49,7 @@ sub BUILD
 	# Check [global].
 
 	$self -> config(Config::Tiny -> read($path) );
+warn "Config::Tiny:errstr: " . $Config::Tiny::errstr;
 	$self -> section('global');
 
 	if (! ${$self -> config}{$self -> section})
