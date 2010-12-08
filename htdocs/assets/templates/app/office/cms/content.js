@@ -124,9 +124,8 @@ var update_content_onsubmit = function ()
 	{
 		body_editor.saveHTML();
 		head_editor.saveHTML();
-		var body = body_editor.get('element').value;
-		var head = head_editor.get('element').value;
-		alert('Head: <' + head + '>');
+		document.update_content_form.body.value = body_editor.get('element').value;
+		document.update_content_form.head.value = head_editor.get('element').value;
 		var r = YAHOO.util.Connect.asyncRequest("POST", url, update_content_callback);
 	}
 	else
