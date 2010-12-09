@@ -11,7 +11,7 @@ use Try::Tiny;
 
 # We don't use Moose because we isa CGI::Application.
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # -----------------------------------------------
 
@@ -474,26 +474,9 @@ sub edit
 
 	$self -> log(debug => 'edit()');
 
-	# Default to home page, if any.
+	# Default to homepage, if any.
 
-	my($page_set) = $self -> param('db') -> page -> get_pages($site, $design);
-	my($page)     = [grep{$$_{homepage} =~ /Yes/} @$page_set];
-
-	if ($#$page != 0)
-	{
-		if ($#$page_set < 0)
-		{
-			return ("Error: Site '$$site{name}', design '$$design{name}', has no pages in the database", 'update_site_message_div');
-		}
-		else
-		{
-			$page = $$page_set[0];
-		}
-	}
-	else
-	{
-		$page = $$page[0];
-	}
+	my($page) = $self -> param('db') -> page -> get_homepage($$site{id}, $$design{id});
 
 	# We save some data so various other subs have access to it.
 	# We don't put these in a hidden form field, to stop tampering.

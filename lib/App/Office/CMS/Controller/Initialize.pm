@@ -5,7 +5,7 @@ use common::sense;
 
 use Text::Xslate 'mark_raw';
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # -----------------------------------------------
 

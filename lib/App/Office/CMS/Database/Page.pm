@@ -12,7 +12,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # --------------------------------------------------
 
@@ -261,7 +261,7 @@ sub delete
 
 	my($message) = "Deleted '$$page{name}' from the menu";
 
-	# If that was the last page in the design, fabricate a default home page.
+	# If that was the last page in the design, fabricate a default homepage.
 
 	if (scalar $tree -> daughters == 0)
 	{
@@ -269,20 +269,14 @@ sub delete
 
 		$self -> add_homepage($site, $design);
 
-		$message .= ". Also, a default home page has been generated";
+		$message .= ". Also, a default homepage has been generated";
 	}
 
 	# Now we must set the 'current' page to something meaningful.
-	# Possibilites:
-	# o The parent, if we deleted a child.
-	# o The home page, if we deleted the last remaining page.
-	# o The next-left, if any, if we deleted any other page. And, if no next-left, go up, if possible?
-
-	# In the short term, go to the home page.
 
 	my($homepage) = $self -> get_homepage($$page{site_id}, $$page{design_id});
 
-	$self -> log(debug => "Got home page id: $$homepage{id}");
+	$self -> log(debug => "Got homepage id: $$homepage{id}");
 
 	$self -> db -> session -> param(edit_page_id => $$homepage{id});
 
@@ -357,7 +351,20 @@ sub get_homepage
 
 	my($page) = $self -> db -> simple -> query('select * from pages where site_id = ? and design_id = ? and homepage = ?', $site_id, $design_id, 'Yes') -> hash;
 
-	$$page{exact_match} = 1 if ($page);
+	# If we can't find any page flagged as the homepage, find the root's first daughter.
+	# Of course, the page we find may not be the homepage, unless the homepage is the only page.
+	# This works because whenever we delete a page, and there are no pages left,
+	# we fabricate a homepage.
+
+	if (! $page)
+	{
+		my($tree) = $self -> db -> menu -> get_menu_by_context($self -> db -> build_context($site_id, $design_id) );
+		my(@girl) = $tree -> daughters;
+		my($id)   = ${$girl[0] -> attribute}{id};
+		$page     = $self -> get_page_by_id($id);
+	}
+
+	$$page{exact_match} = 1;
 
 	return $page;
 
@@ -467,7 +474,7 @@ site_id
 
 	if ($$data{homepage} eq 'Yes')
 	{
-		# If this is a home page, no other page in this design can be a home page...
+		# If this is a homepage, no other page in this design can be a homepage...
 
 		$self -> db -> simple -> update
 			(

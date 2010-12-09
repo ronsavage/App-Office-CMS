@@ -89,10 +89,10 @@ In general, whenever the program is displaying the name of a site, design or
 page, you can just try in a new name, and click [Save].
 
 So, if you changed the site's name, a new site will be created, using the given
-design name of course, and it will contain a new home page.
+design name of course, and it will contain a new homepage.
 
 If you just change the design's name, a new design will be created, with a matching
-home page.
+homepage.
 
 Likewise, changing the name on an existing page will just change the name of that page.
 
@@ -104,7 +104,7 @@ The complex part begins when you're building up the site's menu.
 
 You use the buttons on the [Edit Pages] tab to add pages to the menu, one at a time.
 
-Starting with a menu containing just the home page, you can extend the menu tree up or down,
+Starting with a menu containing just the homepage, you can extend the menu tree up or down,
 or you can add submenus to any existing page.
 
 This menu structure will produce a corresponding directory structure when you finally
@@ -112,6 +112,13 @@ generate the web site's files.
 
 For each menu item, and hence for each page, you specify the content to appear on that
 page, and the page template to be used when generating pages' files and writing them to disk.
+
+=head1 Deleting Pages
+
+After you delete a page, the homepage becomes the 'current' page. If no page is flagged as
+the home page, then the first page in the design becomes the 'current' page.
+
+The 'first page' is the one on the Edit Pages tab which appears at the top of the site map.
 
 =head1 How do I skin the Design?
 

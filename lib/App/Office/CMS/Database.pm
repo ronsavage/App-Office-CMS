@@ -104,7 +104,7 @@ has site =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # -----------------------------------------------
 
@@ -208,7 +208,7 @@ sub build_default_asset
 	}
 	catch
 	{
-		die "Error: Home page template file '$home_asset' is missing";
+		die "Error: Homepage template file '$home_asset' is missing";
 	};
 
 	return

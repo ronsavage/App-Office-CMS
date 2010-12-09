@@ -10,7 +10,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # --------------------------------------------------
 
@@ -35,7 +35,7 @@ sub add
 	$$design{site_id} = $$site{id};
 	$design           = $self -> db -> design -> add($site, $design);
 
-	return "Saved site '$$site{name}' and design '$$design{name}'. Also, a default home page has been generated";
+	return "Saved site '$$site{name}' and design '$$design{name}'. Also, a default homepage has been generated";
 
 } # End of add.
 

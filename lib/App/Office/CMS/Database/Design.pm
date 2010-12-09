@@ -14,7 +14,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # --------------------------------------------------
 
@@ -35,7 +35,7 @@ sub add
 	{
 		$self -> db -> session -> param(edit_design_id => $$design{id});
 
-		# Every design has a default home page, and an asset and content.
+		# Every design has a default homepage, and an asset and content.
 
 		my($homepage) = $self -> db -> page -> add_homepage($site, $design);
 	}

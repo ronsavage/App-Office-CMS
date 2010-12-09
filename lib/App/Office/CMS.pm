@@ -1,6 +1,6 @@
 package App::Office::CMS;
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 # -----------------------------------------------
 
@@ -148,11 +148,11 @@ click Save.
 
 This web page has a default asset (output file template), and default (empty) content.
 
-=item o Why is the name of the home page in the config file?
+=item o Why is the name of the homepage in the config file?
 
 To make it easy to edit!
 
-Also note that there are 2 template files shipped with this distro, one for the home page
+Also note that there are 2 template files shipped with this distro, one for the homepage
 and one for any other page. These templates are not fancy, they are just there as guidelines
 for how you should develop your own templates.
 
@@ -395,7 +395,7 @@ Or, install cms.cgi and point your browser at:
 Mostly, you'll be working on the Edit Content tab, so that's where the [Generate] button is.
 
 Clicking [Generate] generates all of the pages in the current design. You do not have to be
-editing content for the home page to use the [Generate] button.
+editing content for the homepage to use the [Generate] button.
 
 The disk directory structure created matches the tree structure you have created via the Edit Pages tab.
 
@@ -704,7 +704,7 @@ page_template_path.
 All *.tx files in this directory are put into the page template menu on the
 'Update Design' page.
 
-The default home page template is home.page.tx.
+The default homepage template is home.page.tx.
 
 The default generic page template is generic.page.tx.
 
@@ -836,7 +836,7 @@ L<https://rt.cpan.org/Public/Dist/Display.html?Name=App-Office-CMS>.
 
 L<App::Office::CMS> was written by Ron Savage I<E<lt>ron@savage.net.auE<gt>> in 2010.
 
-Home page: L<http://savage.net.au/index.html>.
+Homepage: L<http://savage.net.au/index.html>.
 
 =head1 Copyright
 
