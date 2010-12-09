@@ -251,7 +251,7 @@ sub delete
 
 	my($design) = $self -> db -> design -> get_design_by_id($$page{design_id});
 
-	$self -> db -> menu -> update($design, $tree);
+	$self -> db -> menu -> update($design, $tree, ['page_id']);
 
 	# Delete from the pages table.
 
