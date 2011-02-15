@@ -1,7 +1,8 @@
 package App::Office::CMS::Util::Validator;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Brannigan;
 
@@ -26,7 +27,7 @@ has query =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # -----------------------------------------------
 

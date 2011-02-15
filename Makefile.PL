@@ -31,7 +31,6 @@ WriteMakefile
 		CGI::Application           => 4.31,
 		CGI::Application::Dispatch => 2.17,
 		CGI::Untaint               => 1.26,
-		common::sense              => 3.0,
 		Config::Tiny               => 2.12,
 		Data::Session              => 1.01,
 		Date::Format               => 2.24,

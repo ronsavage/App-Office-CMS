@@ -1,11 +1,10 @@
 package App::Office::CMS::View::Base;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Lingua::EN::Inflect::Number 'to_S';
-
-use Path::Class; # For file().
 
 use Text::Xslate 'mark_raw';
 
@@ -35,16 +34,10 @@ has templater =>
 	isa => 'Text::Xslate',
 );
 
-has tmpl_path =>
-(
-	is  => 'rw',
-	isa => 'Str',
-);
-
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # -----------------------------------------------
 

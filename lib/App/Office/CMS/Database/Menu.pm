@@ -1,7 +1,8 @@
 package App::Office::CMS::Database::Menu;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Tree::DAG_Node::Persist;
 
@@ -25,7 +26,7 @@ has table_name =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # --------------------------------------------------
 

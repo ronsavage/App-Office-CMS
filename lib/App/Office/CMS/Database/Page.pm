@@ -1,7 +1,8 @@
 package App::Office::CMS::Database::Page;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Date::Format;
 
@@ -12,7 +13,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # --------------------------------------------------
 

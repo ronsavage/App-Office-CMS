@@ -1,6 +1,6 @@
 package App::Office::CMS;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # -----------------------------------------------
 
@@ -18,7 +18,7 @@ The scripts discussed here, I<cms.cgi> and I<cms.psgi>, are shipped with this mo
 
 A classic CGI script, I<cms.cgi>:
 
-	#!/usr/bin/perl
+	#!/usr/bin/env perl
 
 	use strict;
 	use warnings;
@@ -44,7 +44,7 @@ A classic CGI script, I<cms.cgi>:
 
 A L<Plack> script, I<cms.psgi>:
 
-	#!/usr/bin/perl
+	#!/usr/bin/env perl
 
 	use strict;
 	use warnings;

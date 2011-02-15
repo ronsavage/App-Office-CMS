@@ -1,7 +1,8 @@
 package App::Office::CMS::Util::Create;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use App::Office::CMS::Database;
 use App::Office::CMS::Util::Config;
@@ -54,7 +55,7 @@ has verbose =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # -----------------------------------------------
 

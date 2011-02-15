@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #
 # Run with:
 # starman -l 127.0.0.1:5006 --workers 1 httpd/cgi-bin/office/cms.psgi &

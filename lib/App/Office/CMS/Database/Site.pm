@@ -1,7 +1,8 @@
 package App::Office::CMS::Database::Site;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Date::Format;
 
@@ -10,7 +11,7 @@ extends 'App::Office::CMS::Database::Base';
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # --------------------------------------------------
 
@@ -168,18 +169,6 @@ sub duplicate
 
 # --------------------------------------------------
 
-sub get_site_by_id
-{
-	my($self, $id)  = @_;
-
-	$self -> log(debug => "get_site_by_id($id)");
-
-	return  $self -> db -> simple -> query('select * from sites where id = ?', $id) -> hash;
-
-} # End of get_site_by_id.
-
-# --------------------------------------------------
-
 sub get_site_by_exact_name
 {
 	my($self, $name) = @_;
@@ -193,6 +182,18 @@ sub get_site_by_exact_name
 	return $site;
 
 } # End of get_site_by_exact_name.
+
+# --------------------------------------------------
+
+sub get_site_by_id
+{
+	my($self, $id)  = @_;
+
+	$self -> log(debug => "get_site_by_id($id)");
+
+	return  $self -> db -> simple -> query('select * from sites where id = ?', $id) -> hash;
+
+} # End of get_site_by_id.
 
 # --------------------------------------------------
 

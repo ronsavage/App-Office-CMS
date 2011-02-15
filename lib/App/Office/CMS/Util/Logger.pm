@@ -1,7 +1,8 @@
 package App::Office::CMS::Util::Logger;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 use Log::Handler;
 
@@ -42,7 +43,7 @@ has time_option =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # -----------------------------------------------
 

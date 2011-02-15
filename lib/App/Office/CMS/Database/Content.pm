@@ -1,7 +1,8 @@
 package App::Office::CMS::Database::Content;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 extends 'App::Office::CMS::Database::Base';
 
@@ -12,7 +13,7 @@ use File::Slurp; # For write_file().
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # --------------------------------------------------
 

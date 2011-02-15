@@ -1,7 +1,8 @@
 package App::Office::CMS::Database::Base;
 
 use Any::Moose;
-use common::sense;
+use strict;
+use warnings;
 
 has db =>
 (
@@ -12,7 +13,7 @@ has db =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.92';
+our $VERSION = '0.93';
 
 # --------------------------------------------------
 
