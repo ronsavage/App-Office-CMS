@@ -3,6 +3,7 @@ Revision history for Perl extension App::Office::CMS.
 0.93  Tue Feb 15 16:19:00 2011
 	- Replace /usr/bin/perl with /usr/bin/env perl.
 	- Replace common::sense with use strict and use warnings, to get uninit var warnings.
+	- Rename scripts/schema.sh to scripts/plot.schema.sh.
 
 0.92  Thu Dec  9 13:45:00 2010
 	- Fix bug where we delete a page and none of the remaining pages are flagged as a home page.
