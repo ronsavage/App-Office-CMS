@@ -105,7 +105,7 @@ has site =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.93';
+our $VERSION = '0.94';
 
 # -----------------------------------------------
 
