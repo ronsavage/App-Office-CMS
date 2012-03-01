@@ -29,7 +29,7 @@ builder
 {
 	enable "ContentLength";
 	enable "Static",
-	path => qr!^/(assets|favicon|yui)/!,
+	path => qr!^/(assets|favicon|yui)!,
 	root => '/dev/shm/html';
 	$app;
 };
