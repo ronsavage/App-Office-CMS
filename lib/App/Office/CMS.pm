@@ -10,7 +10,7 @@ our $VERSION = '0.94';
 
 =head1 NAME
 
-L<App::Office::CMS> - The Canny, Microlight and Simple CMS
+App::Office::CMS - The Canny, Microlight and Simple CMS
 
 =head1 Synopsis
 
