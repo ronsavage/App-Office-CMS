@@ -1,10 +1,9 @@
 Revision history for Perl extension App::Office::CMS.
 
-0.94  Sat Aug 27 10:46:00 2011
+0.94  Unreleased
 	- Add Plack::Middleware::ContentLength to *.psgi.
-	- Unreleased.
 
-0.93  Tue Feb 15 16:19:00 2011
+0.93  Unreleased
 	- Replace /usr/bin/perl with /usr/bin/env perl.
 	- Replace common::sense with use strict and use warnings, to get uninit var warnings.
 	- Rename scripts/schema.sh to scripts/plot.schema.sh.
