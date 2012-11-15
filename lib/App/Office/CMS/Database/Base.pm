@@ -13,7 +13,7 @@ has db =>
 # If Moose...
 #use namespace::autoclean;
 
-our $VERSION = '0.94';
+our $VERSION = '0.92';
 
 # --------------------------------------------------
 

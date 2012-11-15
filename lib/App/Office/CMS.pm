@@ -1,6 +1,6 @@
 package App::Office::CMS;
 
-our $VERSION = '0.94';
+our $VERSION = '0.92';
 
 # -----------------------------------------------
 
