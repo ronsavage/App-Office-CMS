@@ -1,12 +1,10 @@
 Revision history for Perl extension App::Office::CMS.
 
-0.94  Unreleased
-	- Add Plack::Middleware::ContentLength to *.psgi.
-
 0.93  Unreleased
 	- Replace /usr/bin/perl with /usr/bin/env perl.
 	- Replace common::sense with use strict and use warnings, to get uninit var warnings.
 	- Rename scripts/schema.sh to scripts/plot.schema.sh.
+	- Add Plack::Middleware::ContentLength to *.psgi.
 
 0.92  Thu Dec  9 13:45:00 2010
 	- Fix bug where we delete a page and none of the remaining pages are flagged as a home page.
