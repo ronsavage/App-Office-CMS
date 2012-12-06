@@ -266,7 +266,7 @@ create table $table_name
 (
 id $primary_key,
 level varchar(9) not null,
-message varchar(255) not null,
+message text not null,
 timestamp timestamp $time_option not null default current_timestamp
 ) $engine
 SQL
