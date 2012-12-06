@@ -259,6 +259,7 @@ sub create_log_table
 	my($self)        = @_;
 	my($table_name)  = 'log';
 	my($primary_key) = $self -> creator -> generate_primary_key_sql($table_name);
+	my($type)        = $self -> creator -> db_vendor eq 'ORACLE' ? 'long' : 'text';
 	my($engine)      = $self -> engine;
 	my($time_option) = $self -> time_option;
 	my($result)      = $self -> creator -> create_table(<<SQL);
@@ -266,7 +267,7 @@ create table $table_name
 (
 id $primary_key,
 level varchar(9) not null,
-message text not null,
+message $type not null,
 timestamp timestamp $time_option not null default current_timestamp
 ) $engine
 SQL
