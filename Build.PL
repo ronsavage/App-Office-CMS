@@ -3,7 +3,7 @@ use Module::Build;
 my($builder) = Module::Build -> new
 (
  module_name    => 'App::Office::CMS',
- license        => 'artistic',
+ license        => 'perl_5',
  dist_abstract  => 'The Canny, Microlight and Simple CMS',
  dist_author    => 'Ron Savage <ron@savage.net.au>',
  build_requires =>
