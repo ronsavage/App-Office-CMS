@@ -21,7 +21,7 @@ WriteMakefile
 	},
 	DISTNAME  => 'App-Office-CMS',
 	NAME      => 'App::Office::CMS',
-	LICENSE   => 'perl_5',
+	LICENSE   => 'artistic_2',
 	PL_FILES  => {},
 	PREREQ_PM =>
 	{
