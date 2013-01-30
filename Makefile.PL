@@ -47,7 +47,7 @@ WriteMakefile
 		parent                     => 0.218,
 		Path::Class                => 0.18,
 		String::Dirify             => 1.01,
-		Test::Simple               => 0.94,
+		Test::More               => 0.94,
 		Test::Pod                  => 1.45,
 		Tree::DAG_Node             => 1.06,
 		Tree::DAG_Node::Persist    => 1.03,
