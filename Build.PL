@@ -9,7 +9,7 @@ my($builder) = Module::Build -> new
  build_requires =>
  {
 	 Test::Simple => 0.94,
-	 Test::Pod    => 1.41,
+	 Test::Pod    => 1.45,
  },
  configure_requires =>
  {
