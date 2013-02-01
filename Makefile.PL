@@ -48,7 +48,7 @@ WriteMakefile
 		Path::Class                => 0.18,
 		String::Dirify             => 1.01,
 		Test::More               => 0.94,
-		Test::Pod                  => 1.45,
+#		Test::Pod                  => 1.45, # Make it optional. See t/pod.t
 		Tree::DAG_Node             => 1.06,
 		Tree::DAG_Node::Persist    => 1.03,
 		Try::Tiny                  => 0.06,
