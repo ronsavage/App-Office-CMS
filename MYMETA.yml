@@ -8,7 +8,7 @@ configure_requires:
   Module::Build: '0.38'
 dynamic_config: 0
 generated_by: 'Module::Build version 0.4211, CPAN::Meta::Converter version 2.142060'
-license: artistic
+license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
@@ -16,88 +16,88 @@ name: App-Office-CMS
 provides:
   App::Office::CMS:
     file: lib/App/Office/CMS.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller:
     file: lib/App/Office/CMS/Controller.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Backup:
     file: lib/App/Office/CMS/Controller/Backup.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Content:
     file: lib/App/Office/CMS/Controller/Content.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Design:
     file: lib/App/Office/CMS/Controller/Design.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Initialize:
     file: lib/App/Office/CMS/Controller/Initialize.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Page:
     file: lib/App/Office/CMS/Controller/Page.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Search:
     file: lib/App/Office/CMS/Controller/Search.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Controller::Site:
     file: lib/App/Office/CMS/Controller/Site.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database:
     file: lib/App/Office/CMS/Database.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Asset:
     file: lib/App/Office/CMS/Database/Asset.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Base:
     file: lib/App/Office/CMS/Database/Base.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Content:
     file: lib/App/Office/CMS/Database/Content.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Design:
     file: lib/App/Office/CMS/Database/Design.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Event:
     file: lib/App/Office/CMS/Database/Event.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Menu:
     file: lib/App/Office/CMS/Database/Menu.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Page:
     file: lib/App/Office/CMS/Database/Page.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Database::Site:
     file: lib/App/Office/CMS/Database/Site.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Util::Config:
     file: lib/App/Office/CMS/Util/Config.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Util::Create:
     file: lib/App/Office/CMS/Util/Create.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Util::Logger:
     file: lib/App/Office/CMS/Util/Logger.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::Util::Validator:
     file: lib/App/Office/CMS/Util/Validator.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View:
     file: lib/App/Office/CMS/View.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View::Base:
     file: lib/App/Office/CMS/View/Base.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View::Content:
     file: lib/App/Office/CMS/View/Content.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View::Page:
     file: lib/App/Office/CMS/View/Page.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View::Search:
     file: lib/App/Office/CMS/View/Search.pm
-    version: '0.92'
+    version: '0.93'
   App::Office::CMS::View::Site:
     file: lib/App/Office/CMS/View/Site.pm
-    version: '0.92'
+    version: '0.93'
 requires:
   Any::Moose: '0.13'
   Brannigan: '0.5'
@@ -126,5 +126,5 @@ requires:
   Try::Tiny: '0.06'
   parent: '0.218'
 resources:
-  license: http://www.perlfoundation.org/artistic_license_1_0
-version: '0.92'
+  license: http://www.perlfoundation.org/artistic_license_2_0
+version: '0.93'
