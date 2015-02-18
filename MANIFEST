@@ -1,6 +1,6 @@
 Build.PL
 Changelog.ini
-CHANGES
+Changes
 data/asset_types.txt
 data/event_types.txt
 data/menu_orientations.txt
