@@ -1,6 +1,7 @@
 Revision history for Perl extension App::Office::CMS.
 
-0.93  Unreleased
+0.93  Wed Feb 18 16:32:00 2015
+	- Rename CHANGES to Changes.
 	- Replace /usr/bin/perl with /usr/bin/env perl.
 	- Replace common::sense with use strict and use warnings, to get uninit var warnings.
 	- Rename scripts/schema.sh to scripts/plot.schema.sh.
