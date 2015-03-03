@@ -70,5 +70,5 @@ scripts/populate.tables.pl
 scripts/report.tables.pl
 scripts/schema.sh
 scripts/test.log.handler.pl
-t/pod.t
 t/test.t
+xt/author/pod.t
