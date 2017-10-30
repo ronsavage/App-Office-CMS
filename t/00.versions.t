@@ -27,7 +27,7 @@ use DBIx::Admin::TableInfo;
 use DBIx::Simple;
 use File::Path;
 use File::Spec;
-use File::Slurp;
+use File::Slurper;
 use FindBin;
 use JSON::XS;
 use Lingua::EN::Inflect::Number;
@@ -68,7 +68,7 @@ my(@modules) = qw
 	DBIx::Simple
 	File::Path
 	File::Spec
-	File::Slurp
+	File::Slurper
 	FindBin
 	JSON::XS
 	Lingua::EN::Inflect::Number
