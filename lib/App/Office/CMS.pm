@@ -210,7 +210,8 @@ for help on unpacking and installing distros.
 This module does not ship with YUI. You can get it from:
 L<http://developer.yahoo.com/yui>.
 
-All development was done using V 2.8.1.
+All development was done using V 2.8.1. I see now (2017-10-30) that V 3.18.1 is available, but I
+did not install it. In fact I have not used YUI since the last release of this module in 2010-12-09.
 
 Currently, I have no plans to port this code to V 3 of YUI.
 
@@ -242,12 +243,11 @@ Please realize that if you edit this file, you must ensure the copy you are edit
 is the one used by the code at run-time.
 
 After a module such as this is installed, the code will look for that file
-in the directory where I<Build.PL> or I<Makefile.PL> has installed the code.
+in the directory where I<Makefile.PL> has installed the code.
 
 The module which reads the file is C<App::Office::CMS::Util::Config>.
 
-Both I<Build.PL> or I<Makefile.PL> install .htoffice.cms.conf along with the
-Perl modules.
+<Makefile.PL> installs .htoffice.cms.conf along with the Perl modules.
 
 So, if you unpack the distro and edit the file within the unpacked code,
 you'll still need to copy the patched version into the installed code's
@@ -320,14 +320,7 @@ or run:
 
 	sudo cpan App::Office::CMS
 
-or unpack the distro, and then either:
-
-	perl Build.PL
-	./Build
-	./Build test
-	sudo ./Build install
-
-or:
+or unpack the distro, and then:
 
 	perl Makefile.PL
 	make (or dmake)
