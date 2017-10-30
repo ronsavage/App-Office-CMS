@@ -826,6 +826,10 @@ Considered and rejected: L<HTML::Sanitizer>, L<HTML::Scrubber>.
 
 =back
 
+=head1 Repository
+
+L<https://github.com/ronsavage/App-Office-CMS.git>
+
 =head1 Support
 
 Email the author, or log a bug on RT:
@@ -844,8 +848,8 @@ Australian copyright (c) 2010, Ron Savage.
 
 	All Programs of mine are 'OSI Certified Open Source Software';
 	you can redistribute them and/or modify them under the terms of
-	The Artistic License, a copy of which is available at:
-	http://www.opensource.org/licenses/index.html
+	The Perl License, a copy of which is available at:
+	http://dev.perl.org/licenses/
 
 =cut
 
