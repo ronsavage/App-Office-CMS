@@ -5,32 +5,36 @@ use warnings;
 
 # I tried 'require'-ing modules but that did not work.
 
-use Local::Wines; # For the version #.
+use App::Office::CMS; # For the version #.
 
 use Test::More;
 
-use boolean;
+use Any::Moose;
+use Brannigan;
+use Capture::Tiny;
+use CGI;
+use CGI::Application;
+use CGI::Application::Dispatch;
+use CGI::Untaint;
 use Config::Tiny;
-use Date::Simple;
+use Data::Session;
+use Date::Format;
+use DBD::SQLite;
 use DBI;
 use DBIx::Admin::CreateTable;
-use DBIx::Simple;
-use Encode;
+use File::Path;
+use File::Spec;
+use File::Slurp;
 use FindBin;
-use Getopt::Long;
-use Lingua::EN::Inflect;
-use Mojolicious;
-use Mojo::Base;
-use Mojo::Log;
-use Moo;
-use Path::Tiny;
-use Pod::Usage;
-use strict;
-use Text::CSV;
-use Text::CSV::Encoded;
+use JSON::XS;
+use Log::Handler;
+use parent;
+use Path::Class;
+use String::Dirify;
+use Tree::DAG_Node;
+use Tree::DAG_Node::Persist;
+use Try::Tiny;
 use Text::Xslate;
-use Types::Standard;
-use warnings;
 
 # ----------------------
 
@@ -38,31 +42,35 @@ pass('All external modules loaded');
 
 my(@modules) = qw
 /
-	boolean
+	Any::Moose
+	Brannigan
+	Capture::Tiny
+	CGI
+	CGI::Application
+	CGI::Application::Dispatch
+	CGI::Untaint
 	Config::Tiny
-	Date::Simple
+	Data::Session
+	Date::Format
+	DBD::SQLite
 	DBI
 	DBIx::Admin::CreateTable
-	DBIx::Simple
-	Encode
+	File::Path
+	File::Spec
+	File::Slurp
 	FindBin
-	Getopt::Long
-	Lingua::EN::Inflect
-	Mojolicious
-	Mojo::Base
-	Mojo::Log
-	Moo
-	Path::Tiny
-	Pod::Usage
-	strict
-	Text::CSV
-	Text::CSV::Encoded
+	JSON::XS
+	Log::Handler
+	parent
+	Path::Class
+	String::Dirify
+	Tree::DAG_Node
+	Tree::DAG_Node::Persist
+	Try::Tiny
 	Text::Xslate
-	Types::Standard
-	warnings
 /;
 
-diag "Testing Local::Wines V $Local::Wines::VERSION";
+diag "Testing App::Office::CMS V $App::Office::CMS::VERSION";
 
 for my $module (@modules)
 {
