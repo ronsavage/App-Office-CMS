@@ -61,7 +61,7 @@ my(%params) =
 		'Tree::DAG_Node'					=> 1.29,
 		'Tree::DAG_Node::Persist'			=> 1.12,
 		'Try::Tiny'							=> 0.28,
-		'Text::Xslate'						=> 3.4.0
+		'Text::Xslate'						=> 3.4.0,
 		'warnings'							=> 0,
 	},
 	TEST_REQUIRES =>
