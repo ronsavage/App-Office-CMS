@@ -60,7 +60,7 @@ my(%params) =
 	{
 		'Test::More'	=> 1.001002,
 		'Test::Pod'		=> 1.48,
-	}
+	},
 	VERSION_FROM => 'lib/App/Office/CMS.pm',
 );
 
