@@ -4,7 +4,7 @@ use parent 'App::Office::CMS::Controller';
 use strict;
 use warnings;
 
-# We don't use Moose because we isa CGI::Application.
+# We don't use Moo because we isa CGI::Application.
 
 our $VERSION = '0.93';
 

@@ -1,12 +1,13 @@
 package App::Office::CMS::Util::Validator;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use Brannigan;
 
 use CGI::Untaint;
+
+use Moo;
 
 extends 'App::Office::CMS::Database::Base';
 
@@ -23,9 +24,6 @@ has query =>
 	isa => 'CGI',
 	required => 1,
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -334,10 +332,5 @@ sub validate_site_and_design
 } # End of validate_site_and_design.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

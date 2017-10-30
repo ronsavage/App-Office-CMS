@@ -29,7 +29,6 @@ my(%params) =
 	PL_FILES  => {},
 	PREREQ_PM =>
 	{
-		'Any::Moose'						=> 0.26,
 		'Brannigan'							=> 1.1,
 		'Capture::Tiny'						=> 0.46,
 		'CGI'								=> 3.49,
@@ -52,6 +51,7 @@ my(%params) =
 		'JSON::XS'							=> 3.02,
 		'Lingua::EN::Inflect::Number'		=> 1.11,
 		'Log::Handler'						=> 0.88,
+		'Moo'								=> 2.003002,
 		'parent'							=> 0.234,
 		'Path::Class'						=> 0.37,
 		'Plack::Builder'					=> 0,

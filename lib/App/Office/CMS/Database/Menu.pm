@@ -1,8 +1,9 @@
 package App::Office::CMS::Database::Menu;
 
-use Any::Moose;
 use strict;
 use warnings;
+
+use Moo;
 
 use Tree::DAG_Node::Persist;
 
@@ -22,9 +23,6 @@ has table_name =>
  required => 0,
  default  => 'menus',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -226,10 +224,5 @@ sub update
 } # End of update.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

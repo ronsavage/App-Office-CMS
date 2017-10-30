@@ -1,15 +1,13 @@
 package App::Office::CMS::View::Search;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use JSON::XS;
 
-extends 'App::Office::CMS::View::Base';
+use Moo;
 
-# If Moose...
-#use namespace::autoclean;
+extends 'App::Office::CMS::View::Base';
 
 our $VERSION = '0.93';
 
@@ -102,10 +100,5 @@ sub format_search_result
 } # End of format_search_result.
 
 # -----------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

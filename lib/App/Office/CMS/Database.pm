@@ -1,6 +1,5 @@
 package App::Office::CMS::Database;
 
-use Any::Moose;
 use strict;
 use warnings;
 
@@ -21,6 +20,8 @@ use DBIx::Admin::CreateTable;
 use DBIx::Simple;
 
 use File::Slurper 'read_lines';
+
+use Moo;
 
 use Try::Tiny;
 
@@ -101,9 +102,6 @@ has site =>
 	is  => 'rw',
 	isa => 'App::Office::CMS::Database::Site',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -502,10 +500,5 @@ sub validate_id
 } # End of validate_id.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

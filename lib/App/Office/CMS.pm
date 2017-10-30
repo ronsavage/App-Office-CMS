@@ -94,7 +94,7 @@ to design both the menu itself and the whole web site.
 
 =item o Microlight
 
-This means L<Any::Moose> to get L<Mouse> rather than L<Moose>.
+This means use L<Moo> rather than L<Moose>.
 
 For the same reason, L<DBIx::Simple> rather than L<DBIx::Class>.
 

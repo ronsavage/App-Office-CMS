@@ -1,10 +1,11 @@
 package App::Office::CMS::Util::Config;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use Config::Tiny;
+
+use Moo;
 
 has config =>
 (
@@ -23,9 +24,6 @@ has section =>
 	is  => 'rw',
 	isa => 'Any',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -73,10 +71,5 @@ sub BUILD
 }	# End of BEGIN.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

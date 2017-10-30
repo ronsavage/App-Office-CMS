@@ -15,7 +15,7 @@ use JSON::XS;
 
 use Text::Xslate;
 
-# We don't use Moose because we ias CGI::Application.
+# We don't use Moo because we ias CGI::Application.
 
 our $VERSION = '0.93';
 

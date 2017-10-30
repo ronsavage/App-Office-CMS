@@ -1,10 +1,11 @@
 package App::Office::CMS::View::Base;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use Lingua::EN::Inflect::Number 'to_S';
+
+use Moo;
 
 use Text::Xslate 'mark_raw';
 
@@ -33,9 +34,6 @@ has templater =>
 	is  => 'rw',
 	isa => 'Text::Xslate',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -108,10 +106,5 @@ sub log
 } # End of log.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

@@ -1,6 +1,5 @@
 package App::Office::CMS::Util::Create;
 
-use Any::Moose;
 use strict;
 use warnings;
 
@@ -13,6 +12,8 @@ use DBIx::Admin::TableInfo;
 use File::Slurper 'read_lines';
 
 use FindBin;
+
+use Moo;
 
 extends 'App::Office::CMS::Database::Base';
 
@@ -51,9 +52,6 @@ has verbose =>
 	is  => 'rw',
 	isa => 'Any',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -646,10 +644,5 @@ sub report_all_tables
 }	# End of report_all_tables.
 
 # -----------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

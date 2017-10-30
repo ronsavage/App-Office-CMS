@@ -1,15 +1,13 @@
 package App::Office::CMS::Database::Event;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use Date::Format;
 
-extends 'App::Office::CMS::Database::Base';
+use Moo;
 
-# If Moose...
-#use namespace::autoclean;
+extends 'App::Office::CMS::Database::Base';
 
 our $VERSION = '0.93';
 
@@ -64,10 +62,5 @@ id_list
 } # End of save_event_record.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

@@ -6,6 +6,8 @@ use warnings;
 
 use Text::Xslate 'mark_raw';
 
+# We don't use Moo because we isa CGI::Application.
+
 our $VERSION = '0.93';
 
 # -----------------------------------------------

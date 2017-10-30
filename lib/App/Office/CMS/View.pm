@@ -1,8 +1,9 @@
 package App::Office::CMS::View;
 
-use Any::Moose;
 use strict;
 use warnings;
+
+use Moo;
 
 extends 'App::Office::CMS::View::Base';
 
@@ -34,9 +35,6 @@ has site =>
 	is  => 'rw',
 	isa => 'App::Office::CMS::View::Site',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -85,10 +83,5 @@ sub BUILD
 }	# End of BUILD.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

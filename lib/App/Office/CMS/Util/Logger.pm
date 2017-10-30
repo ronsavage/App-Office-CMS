@@ -1,10 +1,11 @@
 package App::Office::CMS::Util::Logger;
 
-use Any::Moose;
 use strict;
 use warnings;
 
 use Log::Handler;
+
+use Moo;
 
 # We don't use:
 # extends 'App::Office::CSM::Database::Base';
@@ -39,9 +40,6 @@ has time_option =>
 	is  => 'rw',
 	isa => 'Str',
 );
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -148,10 +146,5 @@ sub log
 } # End of log.
 
 # --------------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;

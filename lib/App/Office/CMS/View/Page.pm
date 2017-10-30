@@ -1,17 +1,15 @@
 package App::Office::CMS::View::Page;
 
-use Any::Moose;
 use strict;
 use warnings;
+
+use Moo;
 
 use Text::Xslate 'mark_raw';
 
 use Try::Tiny;
 
 extends 'App::Office::CMS::View::Base';
-
-# If Moose...
-#use namespace::autoclean;
 
 our $VERSION = '0.93';
 
@@ -70,10 +68,5 @@ sub edit
 } # End of edit.
 
 # -----------------------------------------------
-
-no Any::Moose;
-
-# If Moose...
-#__PACKAGE__ -> meta -> make_immutable;
 
 1;
