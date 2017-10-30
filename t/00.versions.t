@@ -37,11 +37,12 @@ use Path::Class;
 use Plack::Builder;
 use strict;
 use String::Dirify;
+use Text::Xslate;
 use Tree;
 use Tree::DAG_Node;
 use Tree::DAG_Node::Persist;
 use Try::Tiny;
-use Text::Xslate;
+use Types::Standard;
 use warnings;
 
 # ----------------------
@@ -78,11 +79,12 @@ my(@modules) = qw
 	Plack::Builder
 	strict
 	String::Dirify
+	Text::Xslate
 	Tree
 	Tree::DAG_Node
 	Tree::DAG_Node::Persist
 	Try::Tiny
-	Text::Xslate
+	Types::Standard
 	warnings
 /;
 
