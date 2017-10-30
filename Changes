@@ -1,6 +1,6 @@
 Revision history for Perl extension App::Office::CMS.
 
-0.93  Mon Oct 30 14:12:00 2017
+0.93  2017-10-30T14:12:00
 	- No code changes.
 	- Adopt new repo structure. See
 		https://savage.net.au/Ron/html/My.Workflow.for.Building.Distros.html.
@@ -15,13 +15,13 @@ Revision history for Perl extension App::Office::CMS.
 	- Reformat dates in this file.
 	- This update was prompted by Father Chrysostomos. See RT#123446. With thanx.
 
-0.92  Thu Dec  9 13:45:00 2010
+0.92  2010-12-09T13:45:00
 	- Fix bug where we delete a page and none of the remaining pages are flagged as a home page.
 		The code crashed with the message: Null in page_id violates non-null constraint.
 		Now, if we can't find a home page, we set the 'current' page to the first daughter of the
 		(fake) root node in the page menu tree.
 
-0.91  Tue Dec  7 12:45:00 2010
+0.91  2010-12-07T12:45:00
 	- Replace Log::Dispatch with Log::Handler. Speed is not everything, but Log::Handler is faster.
 	- In .htoffice.csm.conf, change min_log_level to emergency, and add max_log_level as debug.
 		See Log::Handler for details.
@@ -32,5 +32,5 @@ Revision history for Perl extension App::Office::CMS.
 	- Rename content form fields from head and body to head_text and body_text, in case one of those words
 		is reserved in the same way form is reserved in IE. Also, this makes them easier to search for.
 
-0.90  Mon Nov  1 13:20:00 2010
+0.90  2010-11-01T13:20:00
 	- Original version.
