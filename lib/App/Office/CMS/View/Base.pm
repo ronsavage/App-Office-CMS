@@ -7,6 +7,8 @@ use Lingua::EN::Inflect::Number 'to_S';
 
 use Moo;
 
+use Types::Standard qw/Any/;
+
 use Text::Xslate 'mark_raw';
 
 extends 'App::Office::CMS::Database::Base';
@@ -14,25 +16,25 @@ extends 'App::Office::CMS::Database::Base';
 has config =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has form_action =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has session =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has templater =>
 (
 	is  => 'rw',
-	isa => 'Text::Xslate',
+	isa => Any, # 'Text::Xslate'.
 );
 
 our $VERSION = '0.93';

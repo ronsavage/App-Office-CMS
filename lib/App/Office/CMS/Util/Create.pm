@@ -15,42 +15,44 @@ use FindBin;
 
 use Moo;
 
+use Types::Standard qw/Any HashRef Str/;
+
 extends 'App::Office::CMS::Database::Base';
 
 has config =>
 (
 	is  => 'rw',
-	isa => 'HashRef',
+	isa => HashRef,
 );
 
 has creator =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has db =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has engine =>
 (
 	is  => 'rw',
-	isa => 'Str',
+	isa => Str,
 );
 
 has time_option =>
 (
 	is  => 'rw',
-	isa => 'Str',
+	isa => Str,
 );
 
 has verbose =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 our $VERSION = '0.93';

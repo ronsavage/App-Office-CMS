@@ -9,19 +9,21 @@ use CGI::Untaint;
 
 use Moo;
 
+use Types::Standard qw/Any HashRef/;
+
 extends 'App::Office::CMS::Database::Base';
 
 has config =>
 (
 	is  => 'rw',
-	isa => 'HashRef',
+	isa => HashRef,
 	required => 1,
 );
 
 has query =>
 (
 	is  => 'ro',
-	isa => 'CGI',
+	isa => Any, # 'CGI'.
 	required => 1,
 );
 

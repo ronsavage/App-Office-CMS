@@ -7,21 +7,23 @@ use Moo;
 
 use Tree::DAG_Node::Persist;
 
+use Types::Standard qw/Str/;
+
 extends 'App::Office::CMS::Database::Base';
 
 has context =>
 (
- is       => 'rw',
- isa      => 'Str',
- required => 0,
+	is       => 'rw',
+	isa      => Str,
+	required => 0,
 );
 
 has table_name =>
 (
- is       => 'ro',
- isa      => 'Str',
- required => 0,
- default  => 'menus',
+	is       => 'ro',
+	isa      => Str,
+	required => 0,
+	default  => sub {return 'menus'},
 );
 
 our $VERSION = '0.93';

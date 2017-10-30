@@ -5,6 +5,8 @@ use warnings;
 
 use Moo;
 
+use Types::Standard qw/Any/;
+
 extends 'App::Office::CMS::View::Base';
 
 use App::Office::CMS::View::Content;
@@ -15,25 +17,25 @@ use App::Office::CMS::View::Site;
 has content =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::View::Content',
+	isa => Any, # 'App::Office::CMS::View::Content',
 );
 
 has page =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::View::Page',
+	isa => Any, # 'App::Office::CMS::View::Page',
 );
 
 has search =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::View::Search',
+	isa => Any, # 'App::Office::CMS::View::Search',
 );
 
 has site =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::View::Site',
+	isa => Any, # 'App::Office::CMS::View::Site',
 );
 
 our $VERSION = '0.93';

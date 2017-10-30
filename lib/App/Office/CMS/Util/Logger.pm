@@ -7,6 +7,8 @@ use Log::Handler;
 
 use Moo;
 
+use Types::Standard qw/Any Str/;
+
 # We don't use:
 # extends 'App::Office::CSM::Database::Base';
 # because our sub log is different.
@@ -14,31 +16,31 @@ use Moo;
 has creator =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has db =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has engine =>
 (
 	is  => 'rw',
-	isa => 'Str',
+	isa => Str,
 );
 
 has logger =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has time_option =>
 (
 	is  => 'rw',
-	isa => 'Str',
+	isa => Str,
 );
 
 our $VERSION = '0.93';

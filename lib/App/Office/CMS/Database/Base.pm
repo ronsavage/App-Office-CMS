@@ -5,10 +5,12 @@ use warnings;
 
 use Moo;
 
+use Types::Standard qw/Any/;
+
 has db =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 our $VERSION = '0.93';

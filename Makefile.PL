@@ -57,11 +57,12 @@ my(%params) =
 		'Plack::Builder'					=> 0,
 		'strict'							=> 0,
 		'String::Dirify'					=> 1.03,
+		'Text::Xslate'						=> 3.4.0,
 		'Tree'								=> 1.10,
 		'Tree::DAG_Node'					=> 1.29,
 		'Tree::DAG_Node::Persist'			=> 1.12,
 		'Try::Tiny'							=> 0.28,
-		'Text::Xslate'						=> 3.4.0,
+		'Types::Standard'					=> 1.000005,
 		'warnings'							=> 0,
 	},
 	TEST_REQUIRES =>

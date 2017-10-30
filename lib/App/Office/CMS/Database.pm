@@ -25,82 +25,84 @@ use Moo;
 
 use Try::Tiny;
 
+use Types::Standard qw/Any HashRef/;
+
 has asset =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Asset',
+	isa => Any, # 'App::Office::CMS::Database::Asset',
 );
 
 has config =>
 (
 	is  => 'rw',
-	isa => 'HashRef',
+	isa => HashRef,
 );
 
 has content =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Content',
+	isa => Any, # 'App::Office::CMS::Database::Content',
 );
 
 has dbh =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has design =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Design',
+	isa => Any, # 'App::Office::CMS::Database::Design',
 );
 
 has event =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Event',
+	isa => Any, # 'App::Office::CMS::Database::Event',
 );
 
 has event_type_name2id_map =>
 (
- is  => 'rw',
- isa => 'HashRef',
+	is  => 'rw',
+	isa => HashRef,
 );
 
 has logger =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has menu =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Menu',
+	isa => Any, # 'App::Office::CMS::Database::Menu',
 );
 
 has page =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Page',
+	isa => Any, # 'App::Office::CMS::Database::Page',
 );
 
 has session =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has simple =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has site =>
 (
 	is  => 'rw',
-	isa => 'App::Office::CMS::Database::Site',
+	isa => Any, # 'App::Office::CMS::Database::Site',
 );
 
 our $VERSION = '0.93';

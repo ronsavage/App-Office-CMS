@@ -7,22 +7,24 @@ use Config::Tiny;
 
 use Moo;
 
+use Types::Standard qw/Any/;
+
 has config =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has config_file_path =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 has section =>
 (
 	is  => 'rw',
-	isa => 'Any',
+	isa => Any,
 );
 
 our $VERSION = '0.93';
