@@ -8,7 +8,7 @@ use App::Office::CMS::Util::Validator;
 
 use File::Path 'make_path';
 
-use File::Slurp; # For write_file().
+use File::Slurper 'write_text';
 
 use JSON::XS;
 
@@ -310,7 +310,7 @@ sub generate_web_page
 	my($page_id) = ${$node -> attributes}{page_id};
 	my($content) = $$opt{self} -> param('db') -> content -> get_content_by_page_id($page_id);
 
-	write_file($file_name, $$opt{self} -> param('view') -> content -> generate
+	write_text($file_name, $$opt{self} -> param('view') -> content -> generate
 			   (
 				$$opt{site},
 				$$opt{design},

@@ -10,7 +10,7 @@ use App::Office::CMS::Util::Config;
 use DBIx::Admin::CreateTable;
 use DBIx::Admin::TableInfo;
 
-use File::Slurp; # For read_file.
+use File::Slurper 'read_lines';
 
 use FindBin;
 
@@ -590,7 +590,7 @@ sub read_a_file
 {
 	my($self, $input_file_name) = @_;
 	$input_file_name = "$FindBin::Bin/../data/$input_file_name";
-	my(@line)        = read_file($input_file_name);
+	my(@line)        = read_lines($input_file_name);
 
 	chomp @line;
 

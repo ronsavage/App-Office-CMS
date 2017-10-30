@@ -20,7 +20,7 @@ use DBIx::Admin::CreateTable;
 
 use DBIx::Simple;
 
-use File::Slurp; # For read_file.
+use File::Slurper 'read_lines';
 
 use Try::Tiny;
 
@@ -205,7 +205,7 @@ sub build_default_asset
 	try
 	{
 		my($asset_path) = ${$self -> config}{page_template_path} . "/$home_asset";
-		my($asset)      = read_file($asset_path);
+		my($asset)      = read_lines($asset_path);
 	}
 	catch
 	{

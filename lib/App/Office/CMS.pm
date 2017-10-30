@@ -511,9 +511,9 @@ This is used to validate CGI form data.
 
 See docs/cms.schema.png.
 
-The file was created with scripts/schema.sh, which uses dbigraph.pl.
+The file was created with scripts/schema.sh, which uses dbi.schema.pl.
 
-dbigraph.pl ships with L<GraphViz::DBI>. I patched it to use L<GraphViz::DBI::General>.
+That program is a version of dbigraph.pl, which ships with L<GraphViz::DBI>.
 
 =item o Does the database server have pre-requisites?
 
@@ -547,7 +547,7 @@ So, why are there 2 lines, and not something like 'pg_dump -U cms cms > /tmp/pg.
 
 Because I use L<Capture::Tiny>, which does not want you to use redirection.
 
-Lastly, the output is written using L<File::Slurp>.
+Lastly, the output is written using L<File::Slurper>.
 
 =item o What's this thing called 'context' in the menus and pages tables?
 
