@@ -4,8 +4,6 @@ use parent 'App::Office::CMS::Controller';
 use strict;
 use warnings;
 
-use Data::Dumper::Concise;
-
 use JSON::XS;
 
 use Try::Tiny;
