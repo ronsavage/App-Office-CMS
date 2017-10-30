@@ -9,7 +9,6 @@ use App::Office::CMS; # For the version #.
 
 use Test::More;
 
-use Any::Moose;
 use Brannigan;
 use Capture::Tiny;
 use CGI;
@@ -32,6 +31,7 @@ use FindBin;
 use JSON::XS;
 use Lingua::EN::Inflect::Number;
 use Log::Handler;
+use Moo;
 use parent;
 use Path::Class;
 use Plack::Builder;
@@ -50,7 +50,6 @@ pass('All external modules loaded');
 
 my(@modules) = qw
 /
-	Any::Moose
 	Brannigan
 	Capture::Tiny
 	CGI
@@ -73,6 +72,7 @@ my(@modules) = qw
 	JSON::XS
 	Lingua::EN::Inflect::Number
 	Log::Handler
+	Moo
 	parent
 	Path::Class
 	Plack::Builder
