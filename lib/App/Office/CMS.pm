@@ -723,7 +723,7 @@ For various reasons:
 
 ... does not have attribute setters.
 
-=item o With Mouse, ....
+=item o With Moo, ....
 
 ... a syntax-friendly upgrade path the Moose is preserved.
 
