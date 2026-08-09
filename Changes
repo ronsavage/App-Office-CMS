@@ -1,4 +1,8 @@
-Revision history for Perl extension App::Office::CMS.
+Revision history for Perl module App::Office::CMS.
+
+0.94  2026-04-29T16:00:00
+	- Update Makefile.pl $] test from erroneous non-numeric ($] ge '5.005') to ($] >= 5.005).
+	- Fix tiny typo in POD within CMS.pm.
 
 0.93  2017-10-30T14:12:00
 	- No code changes.

@@ -10,7 +10,7 @@ our $VERSION = '0.93';
 
 =head1 NAME
 
-App::Office::CMS - The Canny, Microlight and Simple CMS
+C<App::Office::CMS> - The Canny, Microlight and Simple CMS
 
 =head1 Synopsis
 
@@ -725,7 +725,7 @@ For various reasons:
 
 =item o With Moo, ....
 
-... a syntax-friendly upgrade path the Moose is preserved.
+... a syntax-friendly upgrade path from Moose is preserved.
 
 =back
 
