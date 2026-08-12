@@ -380,7 +380,7 @@ sub teardown
 
 =head1 NAME
 
-C<App::Office::CMS::Controller> - Manage the Canny, Microlight and Simple CMS
+App::Office::CMS::Controller - Manage the Canny, Microlight and Simple CMS
 
 =head1 Machine-Readable Change Log
 

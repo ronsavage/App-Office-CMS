@@ -106,7 +106,7 @@ sub generate
 
 =head1 NAME
 
-C<App::Office::CMS::View::Content> - Manage the Canny, Microlight and Simple CMS
+App::Office::CMS::View::Content - Manage the Canny, Microlight and Simple CMS
 
 =head1 Machine-Readable Change Log
 

@@ -69,7 +69,7 @@ id_list
 
 =head1 NAME
 
-C<App::Office::CMS::Database::Event> - Manage the Canny, Microlight and Simple CMS
+App::Office::CMS::Database::Event - Manage the Canny, Microlight and Simple CMS
 
 =head1 Machine-Readable Change Log
 

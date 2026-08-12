@@ -653,7 +653,7 @@ sub report_all_tables
 
 =head1 NAME
 
-C<App::Office::CMS::Util::Create> - Manage the Canny, Microlight and Simple CMS
+App::Office::CMS::Util::Create - Manage the Canny, Microlight and Simple CMS
 
 =head1 Machine-Readable Change Log
 
